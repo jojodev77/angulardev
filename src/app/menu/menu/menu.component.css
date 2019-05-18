@@ -1,0 +1,12 @@
+#menu {
+    border: 2px solid blue;
+    background-color: blue;
+    height: 100px;
+}
+
+img {
+    height: 120px;
+}
+button {
+    margin-left: 10%;
+}
