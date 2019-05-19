@@ -2,5 +2,27 @@
 <ng-container class="menu">
   <app-menu></app-menu>
 </ng-container>
+<mat-grid-list cols="3" >
+    <mat-grid-tile>
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title><h2>Cher developpeur</h2></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+              Cette application est consacré à notre framework préféré, Angular.</p><p> Vous trouverez les raccourcis 
+              des commandes CLI, de fonction trés utilisées, vous pouvez vous même ajoutez des formations, commandes et 
+              commentaires. 
+              Merci les angulos-developpeur:)
+              </p>
+            </mat-card-content>
+        
+          </mat-card>
+    </mat-grid-tile>
 
+
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+  </mat-grid-list>
 <router-outlet></router-outlet>
