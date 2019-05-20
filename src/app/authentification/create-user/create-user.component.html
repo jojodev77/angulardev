@@ -1,3 +1,36 @@
-<p>
-  create-user works!
-</p>
+<mat-card>
+  <div>
+    <h1>INSCRIPTIONS</h1>
+  </div>
+  <form [formGroup]="formCreateUser" (ngSubmit)="submit()">
+
+      <div class="example-container">
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Nom ou pseudo GitHub">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+              <input matInput placeholder="Password (Min-6 caractères)">
+            </mat-form-field>
+          </div>
+
+          <div>
+          <mat-form-field>
+              <mat-select placeholder="Votre version d'angular" >
+                  <mat-option value="option" *ngFor="let version of version">{{version.versions}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+        
+            <div>
+                <mat-form-field>
+                    <input matInput placeholder="Expérience angular">
+                  </mat-form-field>
+                </div>
+
+        </div>
+<button type="submit">S'INSCRIRE</button>
+  </form>
+</mat-card>
