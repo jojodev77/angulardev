@@ -8,12 +8,14 @@ import { MenuComponent } from './menu/menu/menu.component';
 import { MaterialModule } from './amterial/material/material.module';
 import { AuthModule } from './authentification/auth/auth.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FonctionComponent } from './pages/fonction/fonction.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    FonctionComponent
   ],
   imports: [
     BrowserModule,

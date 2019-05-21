@@ -24,7 +24,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatFormFieldModule,
     MatAutocompleteModule,
     MatSelectModule,
-    MatInputModule 
+    MatInputModule,
+    MatTableModule 
   ],
   exports: [
     MatToolbarModule,
@@ -35,7 +36,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatFormFieldModule,
     MatAutocompleteModule,
     MatSelectModule,
-    MatInputModule 
+    MatInputModule,
+    MatTableModule
   ]
 })
 export class MaterialModule { }
