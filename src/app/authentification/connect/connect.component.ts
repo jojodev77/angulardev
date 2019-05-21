@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MIN_LENGTH_VALIDATOR } from '@angular/forms/src/directives/validators';
 
 @Component({
   selector: 'app-connect',
@@ -16,10 +17,10 @@ export class ConnectComponent implements OnInit {
 
   ngOnInit() {
   this.formConnect = this.fb.group ({
-    name: '',
-    password: ''
+    name: ['', Validators.required],
+    password: ['', Validators.minLength(6)]
 
-  })
+  });
   }
 inscription() {
 this.router.navigate(['creatUser']);

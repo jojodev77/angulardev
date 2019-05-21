@@ -2,3 +2,6 @@ mat-card {
     height: 100%;
     
 }
+mat-form-field {
+    margin-top: 10%;
+}

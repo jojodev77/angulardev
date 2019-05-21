@@ -1,19 +1,21 @@
 <mat-card class="example-card">
-<form [formGroup]="formConnect" (ngSubmit)="submit()">
+<form [formGroup]="formConnect" (ngSubmit)="submit()" novalidate>
   <div class="example-container">
     <div>
     <mat-form-field>
-      <input matInput placeholder="Nom ou Pseudo git">
+      <input matInput placeholder="Nom ou Pseudo git" formControlName="name">
+      <mat-error>Champ obligatoire</mat-error>
     </mat-form-field>
   </div>
   <div>
     <mat-form-field>
-      <input matInput placeholder="Mot de passe">
+      <input matInput placeholder="Mot de passe" formControlName="password" type="password">
+      <mat-error>Champ invalide => Minimum 6 caractères</mat-error>
     </mat-form-field>
   </div>
  
 
-<button type="submit">SE CONNECTER</button>
+<button type="submit" [disabled]="formConnect.invalid">SE CONNECTER</button>
 </div>
 </form>
 

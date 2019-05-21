@@ -17,9 +17,15 @@
               <a mat-raised-button routerLink="." color="warn">Angular-Material</a>
               <mat-icon>color_lens</mat-icon>
             </button>
+    
   <button mat-raised-button color="warn">
+    <ng-container *ngIf="user == null; else bonjour">
     <a mat-raised-button routerLink="." color="warn" routerLink="auth/connect">LOGIN</a>
     <mat-icon>lockeout</mat-icon>
+  </ng-container>
+  <ng-template #bonjour>
+<p>Bonjour {{user.name}}</p>
+  </ng-template>
   </button>
   
          
