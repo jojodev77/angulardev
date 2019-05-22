@@ -1,6 +1,9 @@
 <mat-card>
+
+  <h1>Les méthodes:</h1>
+  <h2></h2>
     <div class="example-button-row">
-        <button mat-flat-button color="warn">Observable</button>
+        <button mat-flat-button color="warn">Avec observable</button>
         <button mat-flat-button color="primary">Trier</button>
         <button mat-flat-button color="accent">Accent</button>
         <button mat-flat-button color="warn">Warn</button>
@@ -8,4 +11,24 @@
         <a mat-flat-button routerLink="." color="accent">Link</a>
       </div>
 
+
+<div> 
+    <mat-accordion>
+        <mat-expansion-panel>
+      
+      
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Self aware panel
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    
+      
+</div>
 </mat-card>
