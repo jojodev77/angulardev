@@ -17,9 +17,9 @@
         <mat-expansion-panel>
       
       
-          <mat-expansion-panel-header>
+          <mat-expansion-panel-header *ngFor="let fonctions of functio ">
             <mat-panel-title>
-              Self aware panel
+              Self aware panel {{fonctions.nomFonction}}
             </mat-panel-title>
             <mat-panel-description>
               Currently I am {{panelOpenState ? 'open' : 'closed'}}

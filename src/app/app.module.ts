@@ -9,6 +9,7 @@ import { MaterialModule } from './amterial/material/material.module';
 import { AuthModule } from './authentification/auth/auth.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FonctionComponent } from './pages/fonction/fonction.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { FonctionComponent } from './pages/fonction/fonction.component';
     AuthModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule
 
   ],
   providers: [],
