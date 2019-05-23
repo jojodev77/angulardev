@@ -3,12 +3,10 @@
   <h1>Les méthodes:</h1>
   <h2></h2>
     <div class="example-button-row">
-        <button mat-flat-button color="warn">Avec observable</button>
+        <button mat-flat-button color="warn">Observable</button>
         <button mat-flat-button color="primary">Trier</button>
-        <button mat-flat-button color="accent">Accent</button>
-        <button mat-flat-button color="warn">Warn</button>
-        <button mat-flat-button  color="primary">Disabled</button>
-        <a mat-flat-button routerLink="." color="accent">Link</a>
+        <button mat-flat-button color="accent">Search</button>
+        <button mat-flat-button color="warn">Aléatoire</button>
       </div>
 
 
@@ -20,22 +18,22 @@
           <mat-expansion-panel-header >
             <mat-panel-title>
 
-            TYPE:
-            {{fonctions.typeFonction}} 
+          <div class="titre">  <ng-container>TYPE:</ng-container></div>
+           <div class="contenu"> {{fonctions.typeFonction}} </div>
             </mat-panel-title>
             <mat-panel-title>
 
-            Version d'angular:
-        {{fonctions.versionAngular}} 
+           <div class="titre"><ng-container class="titre"> VERSION D'ANGULAR:</ng-container></div>
+        <div class="contenu">  {{fonctions.versionAngular}} </div>
             </mat-panel-title>
             <mat-panel-description >
-            NOM:
-              {{fonctions.nomFonction}}  {{panelOpenState ? '' : ''}}
+            <div class="titre"> <ng-container> NOM:</ng-container></div>
+             <div class="contenu">   {{fonctions.nomFonction}}  {{panelOpenState ? '' : ''}}</div>
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>METHODE DE LA FONCTION:</p>
+          <p class="titre"> <ng-container>METHODE DE LA FONCTION:</ng-container></p>
            <p>{{fonctions.methodeFonction}}</p>
-              <p>COMMENTAIRE:</p>
+              <p class="titre"><ng-container>COMMENTAIRE:</ng-container></p>
            <p>{{fonctions.commentaire}}</p>
         </mat-expansion-panel>
       </mat-accordion>
