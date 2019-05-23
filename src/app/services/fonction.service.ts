@@ -13,8 +13,8 @@ export class FonctionService {
 
   constructor(private http: HttpClient) { }
 
-getFonctionJson(): Observable<Fonction> {
-return this.http.get<Fonction>('./assets/fonction.json');
+getFonctionJson(): Observable<Array<Fonction>> {
+return this.http.get<Array<Fonction>>('./assets/fonction.json');
 
 }
 }

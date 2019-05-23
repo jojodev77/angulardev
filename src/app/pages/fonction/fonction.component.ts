@@ -10,14 +10,15 @@ import { Fonction } from 'src/app/models/fonction.model';
 })
 export class FonctionComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-
+functio: any[];
 
   constructor(private fs: FonctionService) { }
 
   ngOnInit() {
   this.fs.getFonctionJson().subscribe(
 // tslint:disable-next-line: prefer-const
-    (data => {const functio = data; console.log(data); })
+    (data => {this.functio = data;
+     this.functio = Array.of(this.functio);  })
   );
   }
 

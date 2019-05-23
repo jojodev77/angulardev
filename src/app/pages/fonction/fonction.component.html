@@ -12,20 +12,31 @@
       </div>
 
 
-<div> 
-    <mat-accordion>
+<div class="cardModule"> 
+    <mat-accordion *ngFor="let fonctions of functio ">
         <mat-expansion-panel>
       
       
-          <mat-expansion-panel-header *ngFor="let fonctions of functio ">
+          <mat-expansion-panel-header >
             <mat-panel-title>
-              Self aware panel {{fonctions.nomFonction}}
+
+            TYPE:
+            {{fonctions.typeFonction}} 
             </mat-panel-title>
-            <mat-panel-description>
-              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            <mat-panel-title>
+
+            Version d'angular:
+        {{fonctions.versionAngular}} 
+            </mat-panel-title>
+            <mat-panel-description >
+            NOM:
+              {{fonctions.nomFonction}}  {{panelOpenState ? '' : ''}}
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>I'm visible because I am open</p>
+          <p>METHODE DE LA FONCTION:</p>
+           <p>{{fonctions.methodeFonction}}</p>
+              <p>COMMENTAIRE:</p>
+           <p>{{fonctions.commentaire}}</p>
         </mat-expansion-panel>
       </mat-accordion>
     
