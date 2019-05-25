@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FonctionService } from 'src/app/services/fonction.service';
 import { Fonction } from 'src/app/models/fonction.model';
 import { Subject, from } from 'rxjs';
-
+import { map, filter } from 'rxjs/operators';
 @Component({
   selector: 'app-fonction',
   templateUrl: './fonction.component.html',
@@ -10,7 +10,7 @@ import { Subject, from } from 'rxjs';
 })
 export class FonctionComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-functio: Fonction[];
+functio: Array<Fonction>;
 
 
 
@@ -19,15 +19,13 @@ functio: Fonction[];
 
   ngOnInit() {
   this.fs.getFonctionJson().subscribe(
-    (data => {this.functio = data; const bobo = data; }
+    (data => {this.functio = data;  }
     ));
-
   }
 
-
-
 trier() {
-
-alert(this.functio.values);
+  this.fs.getFonctionJsonTrier().subscribe(
+    (data => {this.functio = data;  }
+    ));
 }
 }

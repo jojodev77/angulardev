@@ -4,28 +4,27 @@ import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Fonction } from '../models/fonction.model';
 import { Subject, from } from 'rxjs';
-
+import { filter } from 'rxjs/operators';
+import { Method } from '../models/Method';
 @Injectable({
   providedIn: 'root'
 })
 export class FonctionService {
 
   urlJson: './assets/fonction.json';
-fonction$ = new Subject<any>();
+donne: Fonction;
   constructor(private http: HttpClient) { }
 
+// affichez donne fonction
 getFonctionJson(): Observable<Array<Fonction>> {
 return this.http.get<Array<Fonction>>('./assets/fonction.json');
-
-
 }
-
-getJson(): Observable<Array<Fonction>>  {
-  const fonctionJson = this.http.get<Array<Fonction>>('./assets/fonction.json');
-  return fonctionJson;
-}
-updateFonctionS() {
-this.fonction$.next(this.getFonctionJson());
-return this.fonction$.asObservable();
+getFonctionJsonTrier(): Observable<Array<Method>> {
+return this.http.get<Array<Method>>('./assets/fonction.json').pipe(
+  map(
+    (articles: Method[]) => articles.filter(
+      (article: Method) => article.typeFonction === 'Trier'
+    )
+  ));
 }
 }
