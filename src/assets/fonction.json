@@ -15,5 +15,13 @@
    "versionAngular": 7,
    "commentaire":  "gfrrrrr",
    "avis": "nuhhhu"
+       },
+            {
+                   "typeFonction": "Search",
+    "nomFonction": "Recherche avec tri",
+    "methodeFonction": "jjjj",
+   "versionAngular": 6,
+   "commentaire":  "gfrrrrr",
+   "avis": "nuhhhu"
        }
  ]

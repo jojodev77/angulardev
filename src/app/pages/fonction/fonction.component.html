@@ -4,7 +4,7 @@
   <h2></h2>
     <div class="example-button-row">
         <button mat-flat-button color="warn">Observable</button>
-        <button mat-flat-button color="primary">Trier</button>
+        <button mat-flat-button color="primary" (click)="trier()">Trier</button>
         <button mat-flat-button color="accent">Search</button>
         <button mat-flat-button color="warn">Aléatoire</button>
       </div>
@@ -19,7 +19,7 @@
             <mat-panel-title>
 
           <div class="titre">  <ng-container>TYPE:</ng-container></div>
-           <div class="contenu"> {{fonctions.typeFonction}} </div>
+           <div class="contenu" #typeFonction> {{fonctions.typeFonction}} </div>
             </mat-panel-title>
             <mat-panel-title>
 
