@@ -1,4 +1,4 @@
-
+ [
        {
            "typeFonction": "Trier",
     "nomFonction": "string",
@@ -6,4 +6,14 @@
    "versionAngular": 7,
    "commentaire":  "gfrrrrr",
    "avis": "nuhhhu"
+ 
+       },
+       {
+                   "typeFonction": "Trier",
+    "nomFonction": "string",
+    "methodeFonction": "jjjj",
+   "versionAngular": 7,
+   "commentaire":  "gfrrrrr",
+   "avis": "nuhhhu"
        }
+ ]

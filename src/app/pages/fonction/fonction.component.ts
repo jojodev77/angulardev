@@ -18,7 +18,7 @@ functio: any[];
   this.fs.getFonctionJson().subscribe(
 // tslint:disable-next-line: prefer-const
     (data => {this.functio = data;
-     this.functio = Array.of(this.functio);  })
+     this.functio = Array.push(this.functio);  })
   );
   }
 
