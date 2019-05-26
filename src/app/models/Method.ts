@@ -6,6 +6,7 @@ typeFonction: string;
     versionAngular: number;
     commentaire: string;
     avis?: number;
+
 constructor(typeFonction: string, nomFonction: string, 
              methodeFonction: any, versionAngular: number, commentaire: string, avis: number
 ) {

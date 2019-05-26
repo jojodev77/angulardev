@@ -19,6 +19,8 @@ donne: Fonction;
 getFonctionJson(): Observable<Array<Fonction>> {
 return this.http.get<Array<Fonction>>('./assets/fonction.json');
 }
+
+// fonction trier
 getFonctionJsonTrier(): Observable<Array<Method>> {
 return this.http.get<Array<Method>>('./assets/fonction.json').pipe(
   map(
